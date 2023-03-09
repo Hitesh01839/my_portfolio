@@ -25,19 +25,19 @@ const Navbar = () => {
             <Link to="/about">About</Link>
           </li>
           <li className="nav-li">
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <div className="nav-icons">
           <FaFacebookF
             style={style}
-            onMouseOver={({ target }) => (target.style.color = "black")}
+            onMouseOver={({ target }) => (target.style.color = "grey")}
             onMouseOut={({ target }) => (target.style.color = "white")}
           />
           <span></span>
           <FaInstagram
             style={style}
-            onMouseOver={({ target }) => (target.style.color = "black")}
+            onMouseOver={({ target }) => (target.style.color = "grey")}
             onMouseOut={({ target }) => (target.style.color = "white")}
           />
         </div>
