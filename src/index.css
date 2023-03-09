@@ -1,13 +1,259 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo{
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  color: white;
+  padding-left: 5vw;
+  padding-top: 3vh;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar{
+  display: flex;
+  justify-content: end;
+  padding: 4vh 51vw;
+  background: transparent;
+  position: fixed;
+}
+
+.nav-ul{
+  display: flex;
+  padding-right: 1vw;
+}
+
+.nav-li{
+  list-style: none;
+  padding: 0 2vw;
+}
+
+.nav-li a{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: .3s ease-in-out;
+}
+
+.nav-li a:hover{
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-icons{
+  display: flex;
+}
+
+.nav-icons span{
+  width: 1vw;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+    
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
+
+
+.hero{
+  height: 62vh;
+  width: 100vw;
+  background-color: aliceblue;
+  padding: 19vh 10vw;
+  background: linear-gradient(rgba(162, 99, 72, 0.394), rgba(0, 0, 0, 0.37)), url('./assets/img/bg.jpg');
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+.hero h1{
+  color: white;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  font-family: 'Roboto Slab', serif;
+  font-size: 4rem;
+  padding-top: 7vh;
+  letter-spacing: .2rem;
+}
+
+.hero h2{
+  color: white;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  padding-top: 1vh;
+  letter-spacing: .5rem;
+  font-weight: 400;
+}
+
+.hero h4{
+  padding-top: 45vh;
+  color: white;
+  font-family: 'Montserrat', sans-serif;;
+}
+
+.portfolio{
+  background-color: black;
+  height: 120vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.portfolio h1{
+  color: white;
+  font-weight: bold;
+  padding-top: 20vh;
+  padding-bottom: 4vh;
+  font-family: 'Roboto Slab', serif;
+}
+
+.p-images{
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0vh 4vw;
+  overflow: hidden;
+} 
+
+.p-images .img1{
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  transition: transform .5s, filter 1s ease-in-out;
+  filter: grayscale(100%);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 4vh;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.394), rgba(0, 0, 0, 0.37)), url('./assets/img/bg-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p-images .img1:hover{
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.p-images .img2{
+  height: 70vh;
+  width: 30vw;
+  padding-top: 4vh;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.394), rgba(0, 0, 0, 0.37)), url('./assets/img/bg-3.jpg');
+  background-position: center;
+  background-size: cover;
+  transition: transform .5s, filter 1s ease-in-out;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+}
+
+.p-images .img2:hover{
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.p-images .img3{
+  height: 70vh;
+  width: 30vw;
+  padding-top: 4vh;
+  display: flex;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.414), rgba(0, 0, 0, 0.572)), url('./assets/img/bg-2.jpg');
+  background-position: center;
+  transition: transform .5s, filter 1s ease-in-out;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p-images .img3:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.p-h4{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: black;
+  width: 100vw;
+  height: 5vh;
+}
+
+.about{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white;
+  padding-top: 25vh;
+  padding-left: 5vw;
+}
+
+.biography h1{
+  font-family: 'Roboto Slab', serif;
+  padding-bottom: 3vh;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.biography p{
+  text-align: left;
+  width: 34vw;
+  overflow: hidden;
+  line-height: 1.5rem;
+  font-family: 'Montserrat', sans-serif;  
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.about-img{
+  width: 30vw;
+  box-shadow: 40px -16px grey;
+  height: 90vh;
+  overflow-y: hidden;
+}
+.about-img img{
+  height: 90vh;
+  width: 30vw;
+  padding-right: 8vw;
+  background-position: center;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100);
+  cursor: pointer;
 }
